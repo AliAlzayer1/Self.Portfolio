@@ -1,0 +1,746 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+          margin: 0;
+          padding: 0;
+}
+
+body{
+          font-family: "Poppins", sans-serif;
+}
+
+html{
+          scroll-behavior: smooth;
+}
+
+
+/* Start of Navigation Bar */
+
+.container{
+          width: 100%;
+          min-height: 100vh;
+          padding-right: 8%;
+          padding-left: 8%;
+          box-sizing: border-box;
+          overflow: hidden;
+}
+
+.nav-bar{
+         width: 100%;
+         display: flex;  
+         align-items: center;
+
+}
+
+.logo{
+         width: 11rem;
+         cursor: pointer;
+         margin-top: 30px ;
+         padding: 0px 24px;
+         margin: 0px 70px;
+         transition: rotate 0.5s ease-in-out;
+}
+
+.logo:hover{
+       rotate: 15deg;
+}
+
+
+
+.menu-icon{
+          width:  30px;
+          cursor: pointer;
+          display: none;
+
+}
+
+nav ul li{
+          margin-right: 30px;
+          display: inline-block;
+          list-style: none;
+}
+
+nav{
+          flex: 1;
+          text-align: right;
+}
+
+nav ul li a{
+          text-decoration: none;
+          color:  rgb(135, 15, 248);
+          font-size: 20px;
+}
+
+nav ul li a:hover{
+       opacity: 0.5;
+       filter: alpha(opacity=90);
+}
+
+
+@media only screen and (max-width: 1100px) {
+          nav #MenuList{
+                    width: 100%;
+                    background-color: rgb(135, 15, 248);
+                    position: absolute;
+                    top: 110px;
+                    right: 0;  
+                    z-index: 100;   
+          }
+
+          nav ul li{
+                    display: flex;
+                    flex-direction: column;
+                    padding-bottom: 3px; 
+                   
+          }
+
+          nav ul li a{
+                    color: #fff;
+          }
+
+          .menu-icon{
+                    display: block;
+          }
+
+          #MenuList{
+                    transition: 0.5s;
+          }
+
+          .contact-button{
+              padding: 14px 1rem;
+          }
+
+
+}
+/* End of Navigation Bar */
+
+section{
+       height: 96vh;
+       margin: 0 10rem;
+       min-height: fit-content;
+}
+
+/*  Start of Home section  */
+
+#profile{
+       display: flex;
+       justify-content: center;
+       gap:5rem ;
+       height: 75vh;
+       
+}
+
+.profile__pic-container{
+       display: flex;
+       width: 400px;
+       height: 400px;
+       margin: auto 0px;
+}
+
+.profile-img{
+       border-radius: 100%;
+       transition:   0.3s ease-in-out;
+}
+
+.profile-img:hover{
+       box-shadow: -1px -2px 16px 7px rgb(155, 22, 196);
+}
+
+.profile__text{
+       text-align: center;
+       align-self: center;
+}
+
+.profile__text p{
+       text-align: center;
+       font-weight: 600;
+}
+
+.section__text__p1{
+       text-align: center;
+       color: gray;
+       margin-bottom: 0.6rem;
+       font-size: 20px;
+}
+
+.section__text__h1{
+       text-align: center;
+       font-size: 3rem ;
+}
+
+.section__text__p2{
+       margin-bottom: 1rem;
+       font-size: 1.5rem;
+}
+
+.contact-button{
+       background-color: rgb(166, 46, 236);
+       padding: 15px 7.7rem;
+       border-radius: 2rem;
+       border: none;
+       cursor: pointer;
+       color: #fff;
+       margin-bottom: 1rem; 
+}
+
+@media only screen and (max-width: 1335px){
+       .contact-button{   
+              padding: 6px 8rem;
+              height: 2.6rem;
+              width: 20rem;
+              
+       }
+       .section__text__p2{
+              margin-bottom: 1rem;
+              font-size: 1.47rem;
+       }  
+}
+
+.contact-button:hover{
+       opacity: 0.8;
+       filter: alpha(opacity=90);
+}
+
+.profile-socials-container{
+       display: flex;
+       justify-content: space-around;
+}
+
+.icon{
+       cursor: pointer;
+       margin: 0 2rem; 
+       width: 1.6rem;
+       transition:  rotate 0.3s ease-in-out;
+}
+
+.icon:hover{
+       cursor: pointer;
+       margin: 0 2rem; 
+       width: 1.6rem;
+       opacity: 0.8;
+       filter: alpha(opacity=90);
+       rotate: 25deg;
+}
+
+
+
+@media only screen and (max-width: 1100px){
+       #profile{
+              margin: 1.5rem 0;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              gap:2rem ;
+       }
+
+       .profile__pic-container{
+              display: flex;
+              justify-content: center;
+              width: 100%;
+       }
+
+       .profile-img{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              position: relative;
+              left: 0.3rem;
+              width: 400px;
+              gap: 0px
+       }
+
+       .logo{
+              width: 9rem;
+              cursor: pointer;
+              margin-top: 30px ;
+              padding: 0px 24px;
+              margin: 0px 70px;
+              position: relative;
+              right: 5rem;
+     }
+
+     .section__text__p1{
+       margin-bottom: 0.3rem;
+     }
+
+}
+
+/*  End of Home section */
+
+/*  Start of About section */
+
+.bg-About-Programathon{
+       background-color: #222831;
+}
+
+@media only screen and (max-width: 1100px) {
+       #About{
+              display: flex;
+              flex-direction: column;
+              margin-right: 10rem;
+       }
+
+       .about-container1{
+              display: flex;
+              flex-direction: column;
+              padding: 0 10rem;
+       }
+
+       #About > h1{
+              padding-right: 2.5rem;
+              padding-bottom: 1.5rem;
+       }
+
+       #About > p{
+              padding-right: 2.9rem;
+       }
+
+       .about-img-container{
+              display: flex;
+              justify-content: center;
+              padding-right: 2rem;
+       }
+
+       .about-text-container{
+              padding-right: 1rem;
+              
+       }
+
+       .about-text-container > p{
+              padding-right: 1rem;
+              margin: 0.7rem 1rem ;
+              max-height: 365px;
+       }
+}
+
+/* Start of Responsive Text
+   For Either About and Programathon1
+   Sections */
+
+@media only screen and (max-width: 1450px) {
+       .about-text-container > p{
+              font-size: 30px;
+              height: 450px;
+              position: relative;
+       }
+}
+
+@media only screen and (max-width: 1400px) {
+       .about-text-container > p{
+              font-size: 28px;  
+       }
+}
+
+@media only screen and (max-width: 1300px) {
+       .about-text-container > p{
+              font-size: 27px;  
+       }
+}
+
+@media only screen and (max-width: 1250px) {
+       .about-text-container > p{
+              font-size: 25px;  
+       }
+}
+
+@media only screen and (max-width: 1150px) {
+       .about-text-container > p{
+              font-size: 23px;  
+       }
+}
+
+@media only screen and (max-width: 1000px) {
+       .about-text-container > p{
+              font-size: 21px;  
+              width: 480px;
+       }
+}
+
+@media only screen and (max-width: 950px) {
+       .about-text-container > p{
+              font-size: 21px;  
+              width: 480px;
+              right: 2rem ;
+       }
+}
+
+@media only screen and (max-width: 900px) {
+       .about-text-container > p{
+              font-size: 20px;  
+       }
+
+
+}
+
+@media only screen and (max-width: 875px) {
+       .about-text-container > p{
+              right: 4.4rem;  
+       }
+}
+
+@media only screen and (max-width: 810px) {
+       .about-text-container > p{
+              font-size: 18px;
+              min-width: 380px;
+              position: relative;
+              right: 4.7rem; 
+       }
+}
+
+@media only screen and (max-width: 775px) {
+       .about-text-container > p{
+              position: relative;
+              right: 5.8rem; 
+       }
+}
+
+@media only screen and (max-width: 750px) {
+       .about-text-container > p{
+              position: relative;
+              right: 7rem; 
+       }
+}
+
+@media only screen and (max-width: 710px) {
+       .about-text-container > p{
+              position: relative;
+              right: 8.3rem; 
+       }
+
+       
+}
+
+@media only screen and (max-width: 650px) {
+       .about-text-container > p{
+              position: relative;
+              right: 9.7rem; 
+       }
+
+       #contact > .about__text__h1{
+              font-size: 45px;
+       }
+}
+
+@media only screen and (max-width: 630px) {
+       #contact > .about__text__h1{
+              font-size: 42px;
+       }
+
+       
+}
+
+@media only screen and (max-width: 610px) {
+       #contact > .about__text__h1{
+              font-size: 40px;
+       }
+}
+
+@media only screen and (max-width: 600px) {
+       .about-text-container > p{
+              position: relative;
+              right: 11rem; 
+       }
+
+       nav ul li a{
+              font-size: 17px;
+       }
+
+       #contact > .about__text__h1{
+              font-size: 38px;
+       }
+}
+
+@media only screen and (max-width: 585px) {
+       #contact > .about__text__h1{
+              font-size: 36px;
+       }   
+}
+
+
+@media only screen and (max-width: 570px) {
+       #contact > .about__text__h1{
+              font-size: 34px;
+       }
+}
+
+@media only screen and (max-width: 560px) {
+       #contact > .about__text__h1{
+              font-size: 32px;
+       }   
+
+       .contact-footer{
+           font-size: 13px;   
+       }
+}
+
+@media only screen and (max-width: 547px) {
+       #contact > .about__text__h1{
+              font-size: 30px;
+       } 
+
+       .about-text-container > p{
+              position: relative;
+              right: 12rem; 
+       }
+
+       nav ul li a{
+              font-size: 15px;
+       }
+}
+
+@media only screen and (max-width: 535px) {
+       #contact > .about__text__h1{
+              font-size: 27px;
+       }
+       
+}
+
+/* End of Responsive Text
+   For Either About and Programathon1
+   Sections */
+
+
+.about__text__p{
+       text-align:center ;
+       color: rgb(99, 171, 233);
+       font-size: 20px;
+       padding-right: 2.3rem;
+}
+
+.about__text__h1{
+       color: #5B9A8B;
+       text-align: center;
+       font-size: 3rem ;
+       padding-bottom: 5rem;
+       padding-right: 2rem;
+}
+
+.bg-About-Programathon{
+       border-top-left-radius: 1rem;
+       border-top-right-radius: 1rem;    
+}
+
+#About{ 
+       width: 100%;
+       min-height: 8vh;
+       padding-right: 3%;
+       padding-left: 8%;
+       box-sizing: border-box;
+       overflow: hidden;   
+}
+
+.about-container{
+       gap: 8rem;
+       margin: 0 2rem;
+       width: 100%;  
+}
+
+.about-container1, .about-container2 {
+       display: inline-flex;
+       justify-content: center;
+}
+
+.about-container2{
+       flex-direction: row-reverse;
+}
+
+.about__img{
+       border-radius: 2rem;
+       height: 500px;
+}
+
+.about__text__p1{
+       text-align:justify ;
+       margin: 2rem 2rem;
+       font-size: 33px;  
+}
+
+/*  End of About section */
+
+/*  Start of Programathon1 section */
+
+@media only screen and (max-width: 1100px) {
+       #Programathon1{
+              display: flex;
+              flex-direction: column;
+              margin-right: 10rem;
+       }
+
+       .about-container2{
+              display: flex;
+              flex-direction: column;
+              padding: 0 10rem;
+       }
+
+       #Programathon1 > h1{
+              padding-right: 2.5rem;
+              padding-bottom: 1.5rem;
+       }
+
+       #Programathon1 > p{
+              padding-right: 2.9rem;
+              margin-top: 1rem;
+       }
+
+       .about-img-container{
+              display: flex;
+              justify-content: center;
+              padding-right: 2rem;
+       }
+
+       .about-text-container > p{
+              justify-content: center;
+              padding-right: 1rem;
+              margin: 0.7rem 1rem ;
+              
+       }
+}
+
+#Programathon1{
+       background-color: #222831;
+       border-bottom-left-radius: 1rem;
+       border-bottom-right-radius: 1rem; 
+       width: 100%;
+       min-height: 90vh;
+       padding-right: 3%;
+       padding-left: 8%;
+       box-sizing: border-box;
+       overflow: hidden;  
+}
+
+h2{
+       color: #5B9A8B;
+       text-align: center;
+       font-size: 2.5rem ;
+       padding-bottom: 5rem;
+       margin-right: 1.6rem;
+}
+
+.p1{
+       padding-left: 3.5rem;
+       margin-top: 3rem;
+}
+
+.about__img{
+       border-radius: 2rem;
+       min-height: 500px;
+       min-width: 500px;
+       border: 4px solid #164B60;
+}
+
+.about__text__p{
+       margin-top: 5rem;
+}
+
+/*  End of Programathon1 section */
+
+/*  Start of Contact section */
+
+@media only screen and (max-width: 1640px ) {
+       .contact-container{     
+              padding: 1.5rem 5rem;
+              min-width: 500px;
+       }
+}
+
+@media only screen and (max-width: 1640px ) {
+       .contact-container{     
+              padding: 1.5rem 5rem;
+              min-width: 500px;
+       }
+}
+
+@media only screen and (max-width: 1650px ) {
+       .contact-container{     
+              padding: 1.5rem 5rem;
+              min-width: 500px;
+       }
+}
+
+#contact{
+       display: flex;
+       margin-top: 2rem;
+       flex-direction: column;
+       height: 60vh;
+}
+
+.contact-container, .contact-div{
+       display: flex;
+       justify-content: center;
+}
+
+.contact-container{
+       border: 3px solid gray;
+       border-radius: 2rem;
+       padding: 1.5rem 0;
+       width: 35%;
+}
+
+.icon1{
+       cursor: pointer;
+       margin: 0 10px; 
+       width: 1.6rem;
+       transition:  rotate 0.3s ease-in-out;
+}
+
+.icon1:hover{
+       rotate: 360deg;
+       opacity: 0.8;
+       filter: alpha(opacity=90);
+}
+
+.contact-text:hover{
+       color: rgb(97, 93, 93) ;
+}
+
+.contact-text{
+       cursor: pointer;
+       color: #5B9A8B;
+}
+
+.contact-div-container{
+       display: flex;
+       gap: 2rem;
+}
+
+.container0{
+       display: flex;
+       justify-content: center;
+}
+
+.contact-hyperlink{
+       text-decoration: none;
+       color: #5B9A8B;
+}
+
+.contact-hyperlink:hover{
+       color: rgb(97, 93, 93) ;
+}
+
+.contact-menulist-container{
+       display: flex;
+       justify-content: center;
+       height: 200px;
+       align-items: flex-end;
+       margin-bottom: 2rem;
+       margin-left: 1.3rem;
+}
+
+.nav-hyperlink{
+       color: rgb(166, 46, 236);
+}
+
+.contact-footer{
+       display: flex;
+       justify-content: center;
+       margin-bottom: 1.5rem;
+       align-items: flex-end;
+}
+
+/*  End of Contact section */
+
+
+/*  End
+          of
+               Project */
+
